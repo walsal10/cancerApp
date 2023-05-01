@@ -4,32 +4,78 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-certifi==2018.10.15       # via requests
-chardet==3.0.4            # via requests
-click==7.0                # via flask
-dash-core-components==0.35.0
-dash-html-components==0.13.2
-dash-renderer==0.14.3     # via dash
+blinker==1.6.2
+    # via flask
+certifi==2018.10.15
+    # via requests
+chardet==3.0.4
+    # via requests
+click==8.1.3
+    # via flask
 dash==0.28.5
-decorator==4.3.0          # via plotly, traitlets
-flask-compress==1.4.0     # via dash
+    # via
+    #   -r requirements.in
+    #   dash-core-components
+    #   dash-html-components
+dash-core-components==0.35.0
+    # via -r requirements.in
+dash-html-components==0.13.2
+    # via -r requirements.in
+dash-renderer==0.14.3
+    # via dash
+decorator==4.3.0
+    # via plotly
+flask==2.3.2
+    # via
+    #   dash
+    #   flask-compress
+    #   flask-login
+    #   flask-sqlalchemy
+flask-compress==1.4.0
+    # via dash
 flask-login==0.4.1
+    # via -r requirements.in
 flask-sqlalchemy==2.3.2
-flask==1.0.2              # via dash, flask-compress, flask-login, flask-sqlalchemy
-idna==2.7                 # via requests
-ipython-genutils==0.2.0   # via nbformat, traitlets
-itsdangerous==1.0.0       # via flask
-jinja2==2.10              # via flask
-jsonschema==2.6.0         # via nbformat
-jupyter-core==4.4.0       # via nbformat
-markupsafe==1.0           # via jinja2
-nbformat==4.4.0           # via plotly
-plotly==3.3.0             # via dash
-pytz==2018.5              # via plotly
-requests==2.20.0          # via plotly
-retrying==1.3.3           # via plotly
-six==1.11.0               # via plotly, retrying, traitlets
+    # via -r requirements.in
+idna==2.7
+    # via requests
+ipython-genutils==0.2.0
+    # via nbformat
+itsdangerous==2.1.2
+    # via flask
+jinja2==3.1.2
+    # via flask
+jsonschema==2.6.0
+    # via nbformat
+jupyter-core==4.4.0
+    # via nbformat
+markupsafe==2.1.2
+    # via
+    #   jinja2
+    #   werkzeug
+nbformat==4.4.0
+    # via plotly
+plotly==3.3.0
+    # via dash
+pytz==2018.5
+    # via plotly
+requests==2.20.0
+    # via plotly
+retrying==1.3.3
+    # via plotly
+six==1.11.0
+    # via
+    #   plotly
+    #   retrying
 sqlalchemy==1.2.12
-traitlets==4.3.2          # via jupyter-core, nbformat
-urllib3==1.24             # via requests
-werkzeug==0.14.1
+    # via
+    #   -r requirements.in
+    #   flask-sqlalchemy
+traitlets==4.3.2
+    # via nbformat
+urllib3==1.24
+    # via requests
+werkzeug==2.3.3
+    # via
+    #   -r requirements.in
+    #   flask
